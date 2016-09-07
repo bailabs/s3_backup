@@ -22,7 +22,7 @@ MIT
 
 
 
-From: Bai Web and Mobile Labs
-      https://bai.ph
+Bai Web and Mobile Labs
+https://bai.ph
 
 
