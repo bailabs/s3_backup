@@ -16,10 +16,13 @@ MIT
     b) pip install boto
     c) pip install filechunkio
 
-2) bench get-app s3_backup https://github.com/ccfiel/s3_backup.git
+2) bench get-app s3_backup https://github.com/bailabs/s3_backup.git
 
 3) bench install-app s3_backup
 
 
+
+From: Bai Web and Mobile Labs
+      https://bai.ph
 
 
