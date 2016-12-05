@@ -89,7 +89,15 @@ def upload_file_to_s3(filename, folder, connection, plan):
     if plan == 'Weekly Rotation':
         today = datetime.date.today()
         split_name = str(filename).split('_')
-        name = '_' + split_name[len(split_name) - 1]
+        name = ''
+        if len(split_name) == 4:
+            beg = 1
+            end = 4
+        else:
+            beg = 2
+            end = len(split_name)
+        for name_item in split_name[beg:end]:
+            name += '_' + name_item
         name = today.strftime('%A').lower() + name
         destpath = os.path.join(folder, os.path.basename(name))
     else:
