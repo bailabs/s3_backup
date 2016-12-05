@@ -91,11 +91,10 @@ def upload_file_to_s3(filename, folder, connection, plan):
         split_name = str(filename).split('_')
         name = ''
         if len(split_name) == 4:
-            beg = 1
-            end = 4
+            beg = len(split_name) - 1
         else:
-            beg = 2
-            end = len(split_name)
+            beg = len(split_name) - 2
+        end = len(split_name)
         for name_item in split_name[beg:end]:
             name += '_' + name_item
         name = today.strftime('%A').lower() + name
